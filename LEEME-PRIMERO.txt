@@ -1,0 +1,32 @@
+TV COBIA R3 - ARCHIVOS DE MANTENIMIENTO
+=======================================
+
+Lee README.md para la documentacion completa.
+Copia original de todo esto: ~/Developer/cobia-tv/ en la Mac de Rob.
+
+QUE CORRE DONDE
+---------------
+
+Dentro de la TV (via: adb shell sh /sdcard/cobia-tv/<script>):
+  restaurar-tv.sh            Reactiva las 39 apps desactivadas
+  aplicar-declutter-tv.sh    Vuelve a desactivarlas
+
+Desde una computadora con adb (carpeta host-mac/):
+  restaurar-todo.sh          Igual que restaurar-tv.sh, pero desde la Mac
+  rescate-launcher.sh        EMERGENCIA: la TV se quedo sin interfaz
+  aplicar-declutter.sh       Igual que aplicar-declutter-tv.sh, desde la Mac
+  Estos NO funcionan dentro de la TV: llaman a adb desde fuera.
+  Estan aqui solo como respaldo por si se pierde la copia de la Mac.
+
+Datos:
+  apps-desactivadas.txt      Las 39 apps. Es la fuente de verdad de los scripts.
+
+CONECTARSE
+----------
+  adb connect 192.168.0.55:5555
+
+ADVERTENCIA
+-----------
+Un RESET DE FABRICA borra esta carpeta, y es justo el momento en que harian
+falta estos archivos. Manten siempre la copia en la Mac (~/Developer/cobia-tv/)
+o en algun otro lado fuera de la TV.
